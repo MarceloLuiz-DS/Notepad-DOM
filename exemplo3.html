@@ -1,0 +1,44 @@
+<html lang="pt-br">
+	<head>
+		<title>Exemplo 3</title>
+		<meta charset="UTF-8">
+		<style>
+		body{
+		background-color: #90ff90;
+		color: black;
+		font-size: 12pt;
+		font-family: arial, 'times new roman';
+		font-style: italic;
+		}
+		</style>
+		<script>
+		
+			//Aluno: Marcelo Luiz dos Santos.
+		
+			//Declarando as Variáveis:
+			let pessoa= "Aluno:";
+			let aluno= " Marcelo Luiz Dos Santos.";
+			//Definição da Função:
+			function mudaTexto(texto) {
+				//Cria a Variável Titulo e Atribui a ela o objeto h3.
+				let paragrafo = document.getElementById("texto");
+				//Muda a cor do titulo para a cor que veio como Parâmetro 
+				paragrafo.innerHTML=texto;
+			}
+			
+			document.write("<br><br>  " + pessoa + aluno + "<br>");
+
+			
+		</script>
+	</head>
+	<body>
+		<!--Ceriando um Paragráfo com id titulo-->
+		<p id = 'texto'>Curso de JavaScript</p>
+		<br> Fonte do Título:
+		
+		<!-- Criando botões que chamam a Função passando o Texto desejado -->
+		<input type= "button" value="Novo Texto" onclick="mudaTexto('Programação Web');">
+		<input type= "button" value="Texto Original" onclick="mudaTexto('Curso de JavaScript');">
+
+	</body>
+</html>

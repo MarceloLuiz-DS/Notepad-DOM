@@ -1,0 +1,41 @@
+<html lang="pt-br">
+	<head>
+		<title>Exemplo 2</title>
+		<meta charset="UTF-8">
+		<style>
+		body{
+		background-color: #90ff90;
+		color: black;
+		font-size: 12pt;
+		font-family: arial, 'times new roman';
+		font-style: italic;
+		}
+		</style>
+		<script>
+		
+			//Aluno: Marcelo Luiz dos Santos.
+		
+			//Definição da Função:
+			function TituloFont(cor) {
+				//Cria a Variável Titulo e Atribui a ela o objeto h3.
+				let titulo=document.getElementById("titulo");
+				//Muda a cor do titulo para a cor que veio como Parâmetro 
+				titulo.style.color = cor;
+			}
+			
+		</script>
+	</head>
+	<body>
+	<!--Ceriando um titulo h3 com id titulo-->
+		<h3 id = 'titulo'>Minha Página com JavaScript</h3>
+		<br> Fonte do Título:
+		
+		<input type= "button" value="Vermelho" onclick="TituloFont('#FF0000');">
+		<input type= "button" value="Verde" onclick="TituloFont('Green');">
+		<input type= "button" value="Azul" onclick="TituloFont('Blue');">
+		<input type= "button" value="Rosa" onclick="TituloFont('Pink');">
+		<input type= "button" value="Amarelo" onclick="TituloFont('Yellow');">
+		<input type= "button" value="Preto" onclick="TituloFont('#000000');">
+
+	</body>
+</html>

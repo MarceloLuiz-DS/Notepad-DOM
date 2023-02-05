@@ -1,0 +1,51 @@
+<html lang="pt-br">
+	<head>
+		<title>Desafio 5</title>
+		<meta charset="UTF-8">
+		<style>
+		body{
+		background-color: #90ff90;
+		color: black;
+		font-size: 12pt;
+		font-family: arial, 'times new roman';
+		font-style: italic;
+		}
+		</style>
+		<script>
+		
+			//Aluno: Marcelo Luiz dos Santos.
+		
+			//Declarando as Variáveis:
+			let pessoa= "Aluno:";
+			let aluno= " Marcelo Luiz Dos Santos.";
+			
+			//Definição da Função:
+			function calcular() {
+				let tag = document.forms["curso"];
+				let nome = tag.elements["fNome"].value;
+				let nota1 = tag.elements["fNota1"].value;
+				let nota2 = tag.elements["fNota2"].value;
+				let media = (parseFloat(nota1)+parseFloat(nota2))/2;
+				
+				//Executando o comando Alert:
+				alert("Olá " + nome + "\nSua média foi: " + media);
+			}
+			
+			document.write("<br><br>  " + pessoa + aluno + "<br>");
+			
+		</script>
+	</head>
+	<body>
+		<!--Criando um Formulário com nome Curso -->
+		<form name="curso" action="#" method="post">
+			<label>Nome</label><br>
+			<input type="text" name="fNome" value="Digite o seu Nome"><br><br>
+			<label>Nota 1</label><br>
+			<input type="text" name="fNota1"><br><br>
+			<label>Nota 2</label><br>
+			<input type="text" name="fNota2"><br><br>
+			<input type="button" value="Confirmar" onclick="calcular();">
+		</form>
+		
+	</body>
+</html>

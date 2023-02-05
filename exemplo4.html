@@ -1,0 +1,51 @@
+<html lang="pt-br">
+	<head>
+		<title>Exemplo 3</title>
+		<meta charset="UTF-8">
+		<style>
+		body{
+		background-color: #90ff90;
+		color: black;
+		font-size: 12pt;
+		font-family: arial, 'times new roman';
+		font-style: italic;
+		}
+		</style>
+		<script>
+		
+			//Aluno: Marcelo Luiz dos Santos.
+		
+			//Declarando as Variáveis:
+			let pessoa= "Aluno:";
+			let aluno= " Marcelo Luiz Dos Santos.";
+			
+			//Definição da Função:
+			function mudaCor(cor) {
+				//Cria a Variável com a TagP e atribui a ela um
+				//Vetor com todas as Tags P.
+				let tagP = document.getElementsByTagName("p");
+				
+				//Utilize For para pecorrer o Vetor de Tags 
+				for(let i=0; i<tagP.length; i++) {
+				tagP[i].style.color = cor;
+				}
+			}
+			
+			document.write("<br><br>  " + pessoa + aluno + "<br>");
+
+			
+		</script>
+	</head>
+	<body>
+		<!--Criando um Paragráfo com id texto-->
+		<p>Curso de JavaScript</p>
+		<p>Programação Web</p>
+		<p>Etec</p>
+		
+		<!-- Criando botões que chamam a Função passando o Texto desejado -->
+		<input type= "button" value="Rosa" onclick="mudaCor('Pink');">
+		<input type= "button" value="Azul" onclick="mudaCor('Blue');">
+		<input type= "button" value="Preto" onclick="mudaCor('Black');">
+
+	</body>
+</html>
