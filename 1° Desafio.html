@@ -1,0 +1,53 @@
+<html lang="pt-br">
+	<head>
+		<title>Desafio 1</title>
+		<meta charset="UTF-8">
+		<style>
+		body{
+		background-color: #10de10;
+		color: black;
+		font-size: 14pt;
+		font-family: arial, 'times new roman';
+		font-style: italic;
+		}
+		</style>
+		<script>
+		
+			//Aluno: Marcelo Luiz dos Santos.
+		
+			//Declarando as Variáveis:
+			let pessoa= "Aluno:";
+			let aluno= " Marcelo Luiz Dos Santos.";
+			
+				
+			//Definição da Função:
+			function calcular() {
+				
+				let tag = document.forms["calculoSoma"];
+				let nome = tag.elements["fNome"].value;
+				let num1 = tag.elements["fNum1"].value;
+				let num2 = tag.elements["fNum2"].value;
+				let total = (parseFloat(num1)+parseFloat(num2));
+				tag.elements["fTotal"].value = total				
+			}
+			
+			document.write("<br><br>  " + pessoa + aluno + "<br><br>");
+			
+		</script>
+	</head>
+	<body>
+		<!--Criando um Formulário com nome Curso -->
+		<form name="calculoSoma" action="#" method="post">
+			<label>Digite o seu Nome:</label><br>
+			<input type="text" name="fNome" value="Digite aqui: "><br><br>
+			<label>Digite o 1° Número: </label><br>
+			<input type="text" name="fNum1"><br><br>
+			<label>Digite o 2° Número: </label><br>
+			<input type="text" name="fNum2"><br><br>
+			<input type="button" value="Somar" onclick="calcular();"><br><br>
+			<label>O Resultado é: </label><br>
+			<input type="text" name="fTotal" disabled><br><br>
+		</form>
+		
+	</body>
+</html>

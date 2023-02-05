@@ -1,0 +1,124 @@
+<html lang="pt-br">
+	<head>
+		<title>Desafio 2</title>
+		<meta charset="UTF-8">
+		<style>
+		body{
+		color: black;
+		font-size: 12pt;
+		font-family: arial, 'times new roman';
+		font-style: italic;
+		}
+		</style>
+		<script>
+		
+			//Aluno: Marcelo Luiz dos Santos.
+		
+			//Declarando as Variáveis:
+			let pessoa= "Aluno:";
+			let aluno= " Marcelo Luiz Dos Santos.";
+			
+			
+			//APLICANDO COR NO TITULO E NO PARÁGRAFO:
+			//Definição da Função:
+			function TituloFont(cor) {
+				//Cria a Variável Titulo e Atribui a ela o objeto h2.
+				let titulo = document.getElementById("titulo");
+				//Muda a cor do titulo para a cor que veio como Parâmetro 
+				titulo.style.color = cor;
+			}function paragrafoRGBA(cor) {
+				//Cria a Variável Titulo e Atribui a ela o objeto h2.
+				let tagP = document.getElementsByTagName("p");
+				
+				//Utilize For para pecorrer o Vetor de Tags 
+				for(let i=0; i<tagP.length; i++) {
+				tagP[i].style.color = cor;
+				}
+			}
+			
+			//APLICANDO COR DE FUNDO DO BODY E DO FORMS:
+			function corFundo(cor) {
+				//Cria a Variável "Fundo Página" e Atribui a ela o objeto <body></body>.
+				let fundoPagina = document.getElementById("fundoPagina");
+				//Muda a cor de Fundo da Página para a cor de fundo desejada.
+				fundoPagina.style.backgroundColor = cor;
+				document.getElementById("fundoPagina").innerHTML;
+			}function mudarCorDeFundo(){
+				// lê o valor de cor escolhido pelo usuário.
+				let corLivre = document.getElementById("seletor_de_cores").value;
+				// muda a formatação CSS do <body> background para a cor escolhida
+				document.getElementById("pagina").style.backgroundColor = corLivre;
+				// opcional: escreve na página a cor escolhida
+				document.getElementById("cor_selecionada").innerHTML = "A Cor selecionada foi: " + corLivre;
+			}
+			alert("Olá, Professora Máyra. Eu tentei usar a paleta de Cores também, porém não deu certo por completo. Tadavia, sei que não foi solicitado. Contudo mando assim mesmo para que, se possível, por favor, a Senhora me dê um retorno sobre como posso utilizar a paleta de cores ao mesmo tempo que dou para o usuário opções especificas de cores de fundo e cores do Parágrafo. Dês de já, muito obrigado Professora.  ^-^");
+			
+			document.write("<br><br>  " + pessoa + aluno + "<br>");
+			
+		</script>
+	</head>
+	<body id = "fundoPagina" >
+		<form id="pagina">
+		
+		<!--Criando um titulo h2 com id titulo-->
+		<br> <h2 id = 'titulo'>Aprendendo sobre o DOM e as suas Aplicações.</h2>
+		
+		<p>Fonte do Título:
+		
+		<input type= "button" value="Azul" onclick="TituloFont('Blue');">
+		<input type= "button" value="Cinza" onclick="TituloFont('Gray');">
+		<input type= "button" value="Marrom" onclick="TituloFont('Brown');">
+		<input type= "button" value="Roxo" onclick="TituloFont('purple');">
+		<input type= "button" value="Dourado" onclick="TituloFont('Gold');">
+		<input type= "button" value="Vermelho" onclick="TituloFont('#FF0000');">
+		<input type= "button" value="Preto" onclick="TituloFont('#000000');">
+		<input type= "button" value="Branco" onclick="TituloFont('White');">
+		</p>
+		
+		<br><br><br>
+		<p> ESCOLHA UMA COR PARA APLICAR NOS PARAGRAFOS DA PÁGINA: </P>
+		
+		<!--Alterando a cor de cada Parágrafo Livremente-->
+		<p> Caso Prefira, escolha a Cor dos Parágrafos Livremente:
+		
+		<input type= "button" value="Azul" onclick="paragrafoRGBA('Blue');">
+		<input type= "button" value="Cinza" onclick="paragrafoRGBA('Gray');">
+		<input type= "button" value="Marrom" onclick="paragrafoRGBA('Brown');">
+		<input type= "button" value="Roxa" onclick="paragrafoRGBA('Purple');">
+		<input type= "button" value="Dourado" onclick="paragrafoRGBA('Gold');">
+		<input type= "button" value="Vermelho" onclick="paragrafoRGBA('#FF0000');">
+		<input type= "button" value="Rosa" onclick="paragrafoRGBA('Pink');">
+		<input type= "button" value="Preto" onclick="paragrafoRGBA('Black');">
+		<input type= "button" value="Branco" onclick="paragrafoRGBA('White');">
+		</p>
+		<!--Alterando as cores do Parágrafo por meio do RGB.-->
+		<br><br> Caso Prefira, escolha Livremente a Cor para que seja Aplicada nos Parágrafos:
+		<input  id = "tagP" type="color"/>
+		<button type="button" onclick="paragrafoRGBA()">Executar</button>
+		
+		<br><br>
+		<br><br> <p> ESCOLHA UMA COR PARA APLICAR NO FUNDO DA PÁGINA E OUTRA PARA APLICAR UMA COR PARCIAL DA PÁGINA: </P>
+		
+		<!--Alterando a Cor de Fundo: -->
+		<br> <P> Cor de Fundo da Página:
+		
+		<input type= "button" value="Azul" onclick="corFundo('Blue');">
+		<input type= "button" value="Cinza" onclick="corFundo('Gray');">
+		<input type= "button" value="Marrom" onclick="corFundo('Brown');">
+		<input type= "button" value="Roxo" onclick="corFundo('purple');">
+		<input type= "button" value="Dourado" onclick="corFundo('Gold');">
+		<input type= "button" value="Vermelho" onclick="corFundo('#FF0000');">
+		<input type= "button" value="Preto" onclick="corFundo('#000000');">
+		<input type= "button" value="Branco" onclick="corFundo('white');">
+		
+		<!--Alterando a cor de Fundo Parcialmente-->
+		<br><br> Caso Prefira, escolha Livremente a Cor de Fundo da Página que será aplicada de forma Parcial:
+		
+		<input id="seletor_de_cores" type="color"/>
+		<button type="button" onclick="mudarCorDeFundo()">Executar</button>
+		</p>
+		
+		</form>
+		
+	</body>
+</html>
